@@ -2,6 +2,9 @@
 
 require_once 'checkrestapimaint.civix.php';
 
+function checkrestapimaint_civicrm_apiWrappers(&$wrappers, $apiRequest) {
+  $wrappers[] = new CRM_Checkrestapimaint_CheckMaintMode();
+}
 /**
  * Implements hook_civicrm_config().
  *
